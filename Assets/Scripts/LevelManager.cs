@@ -9,7 +9,7 @@ public class LevelManager : MonoBehaviour
     private static LevelManager instance;
     public static LevelManager Instance { get { return instance; } }
 
-    public string[] Levels = new string[5];
+    public string[] Levels = new string[6];
     private void Awake()
     {
         if(instance == null)
@@ -29,6 +29,7 @@ public class LevelManager : MonoBehaviour
         SetLevelStatus(Levels[2], LevelStatus.Locked);
         SetLevelStatus(Levels[3], LevelStatus.Locked);
         SetLevelStatus(Levels[4], LevelStatus.Locked);
+        SetLevelStatus(Levels[5], LevelStatus.Locked);
         Debug.Log("LevelManagerSecond, Level 1 is currently : " + GetLevelStatus(Levels[0]));
 
     }

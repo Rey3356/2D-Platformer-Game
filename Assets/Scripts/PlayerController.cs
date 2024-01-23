@@ -6,7 +6,9 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
-{ 
+{
+
+    
 [SerializeField] private Animator animator;
 [SerializeField] private float Speed = 0f;
 [SerializeField] private float jump = 0f;
@@ -15,6 +17,8 @@ private bool isGrounded;
 [SerializeField] private ScoreManager scoreManager;
 [SerializeField] private PlayerHealth playerHealth;
 [SerializeField] private GameObject GOScreen;
+[SerializeField] public LevelFinish levelFinish;
+
 
     void Awake()
     {
@@ -24,6 +28,7 @@ private bool isGrounded;
     {
         GOScreen.SetActive(false);
         animator.SetBool("Died", false);
+        Time.timeScale = 1.0f;
     }
 
     private void Update()
@@ -140,7 +145,7 @@ private bool isGrounded;
 
     IEnumerator DeathReload()
     {
-        //animator.SetBool("Died", false);
+        levelFinish.playerDeath = true;
         yield return new WaitForSeconds(3);
         GOScreen.SetActive(true);
     }
