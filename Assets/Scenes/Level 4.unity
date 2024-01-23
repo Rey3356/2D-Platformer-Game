@@ -403,31 +403,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4794550834817016553, guid: eca50697ac152e549bb53e43c6d55724,
-        type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4794550834817016553, guid: eca50697ac152e549bb53e43c6d55724,
-        type: 3}
-      propertyPath: m_textInfo.spaceCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4794550834817016553, guid: eca50697ac152e549bb53e43c6d55724,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4794550834817016553, guid: eca50697ac152e549bb53e43c6d55724,
-        type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4794550834817016553, guid: eca50697ac152e549bb53e43c6d55724,
-        type: 3}
-      propertyPath: m_textInfo.pageCount
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4794550834906792280, guid: eca50697ac152e549bb53e43c6d55724,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -537,36 +512,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: 'UI '
-      objectReference: {fileID: 0}
-    - target: {fileID: 6530969049893632558, guid: eca50697ac152e549bb53e43c6d55724,
-        type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 6530969049893632558, guid: eca50697ac152e549bb53e43c6d55724,
-        type: 3}
-      propertyPath: m_textInfo.spaceCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6530969049893632558, guid: eca50697ac152e549bb53e43c6d55724,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6530969049893632558, guid: eca50697ac152e549bb53e43c6d55724,
-        type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6530969049893632558, guid: eca50697ac152e549bb53e43c6d55724,
-        type: 3}
-      propertyPath: m_textInfo.pageCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6530969049893632558, guid: eca50697ac152e549bb53e43c6d55724,
-        type: 3}
-      propertyPath: m_text
-      value: Level 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eca50697ac152e549bb53e43c6d55724, type: 3}
