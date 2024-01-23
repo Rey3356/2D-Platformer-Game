@@ -111,7 +111,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6829607937825410721}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 2.32, y: 0.44, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 308944580}
@@ -245,8 +245,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 7920302912093540087}
-  Speed: 7
-  jump: 15
+  Speed: 5
+  jump: 17
   scoreManager: {fileID: 0}
   playerHealth: {fileID: 0}
   GOScreen: {fileID: 0}
+  levelFinish: {fileID: 0}
