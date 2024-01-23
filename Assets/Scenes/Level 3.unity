@@ -1771,6 +1771,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: UI
       objectReference: {fileID: 0}
+    - target: {fileID: 4794550834906792284, guid: eca50697ac152e549bb53e43c6d55724,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5133689685549848548, guid: eca50697ac152e549bb53e43c6d55724,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6530969049893632558, guid: eca50697ac152e549bb53e43c6d55724,
         type: 3}
       propertyPath: m_text
