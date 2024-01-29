@@ -347,6 +347,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 3557965461632169034}
+        m_MethodName: PlaySound
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: correctClick
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &3557965461632169034
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1167,7 +1178,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 3557965462371263619}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3557965462371263617}
+        m_MethodName: PlaySound
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: correctClick
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &3557965462371263617
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1346,6 +1368,17 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 3557965462954485580}
+        m_MethodName: PlaySound
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: correctClick
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &3557965462954485580
@@ -2248,6 +2281,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 6530969051274003092}
+        m_MethodName: PlaySound
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: correctClick
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &6530969051274003092
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2426,6 +2470,17 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 6530969051274003091}
+        m_MethodName: PlaySound
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: correctClick
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &6530969051274003091
@@ -2866,7 +2921,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 7835120191459184417}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7835120191459184423}
+        m_MethodName: PlaySound
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: correctClick
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &7835120191459184423
 MonoBehaviour:
   m_ObjectHideFlags: 0

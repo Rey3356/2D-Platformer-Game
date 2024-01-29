@@ -18,6 +18,7 @@ public class PlayerHealth : MonoBehaviour
 
     public void LooseHealth()
     {
+        SoundManager.Instance.PlaySFX(Sounds.playerHurt);
         Hearts[health-1].gameObject.SetActive(false);
         health -= 1;
     }

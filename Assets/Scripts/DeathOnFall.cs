@@ -5,12 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class DeathOnFall : MonoBehaviour
 {
+    [SerializeField] PlayerHealth playerHealth;
+    [SerializeField] PlayerController playerController;
     private void OnTriggerEnter2D(Collider2D collider)
     {
         if (collider.gameObject.GetComponent<PlayerController>() != null)
         {
-            Debug.Log("Died! Restarting Level");
-            StartCoroutine(DeathReload());
+            playerHealth.health = 0;
+            playerController.HurtPlayer(new Vector3(0,0,0));
         }
     }
 

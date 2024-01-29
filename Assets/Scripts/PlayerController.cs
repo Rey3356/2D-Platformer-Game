@@ -8,17 +8,20 @@ using UnityEngine.SceneManagement;
 public class PlayerController : MonoBehaviour
 {
 
-    
-[SerializeField] private Animator animator;
-[SerializeField] private float Speed = 0f;
-[SerializeField] private float jump = 0f;
-private Rigidbody2D rb;
-private bool isGrounded;
-[SerializeField] private ScoreManager scoreManager;
-[SerializeField] private PlayerHealth playerHealth;
-[SerializeField] private GameObject GOScreen;
-[SerializeField] public LevelFinish levelFinish;
+    private static PlayerController instance;
+    public static PlayerController Instance { get { return instance; } }
 
+    [SerializeField] private Animator animator;
+    [SerializeField] private float Speed = 0f;
+    [SerializeField] private float jump = 0f;
+    private Rigidbody2D rb;
+    private bool isGrounded;
+    [SerializeField] private ScoreManager scoreManager;
+    [SerializeField] private PlayerHealth playerHealth;
+    [SerializeField] private GameObject GOScreen;
+    [SerializeField] public LevelFinish levelFinish;
+
+    public ParticleSystem BombBlast;
 
     void Awake()
     {
@@ -73,6 +76,7 @@ private bool isGrounded;
         //for jump
         if(vert>0 && isGrounded == true)
         {
+            SoundManager.Instance.PlaySFX(Sounds.playerJump);
             rb.AddForce(new Vector2(0f, jump), ForceMode2D.Impulse);
 
         }
@@ -128,17 +132,24 @@ private bool isGrounded;
         transform.localScale = scale;
     }
 
-    public void HurtPlayer()
+    public void HurtPlayer(Vector3 Contact)
     {
         if(playerHealth.health >= 1 )
         {
+            SoundManager.Instance.PlaySFX(Sounds.playerHurt);
             playerHealth.LooseHealth();
         }
         else
         {
-            animator.SetBool("Died", true);
-            Debug.Log("Killer by Chomper");
-            StartCoroutine(DeathReload());
+            if(levelFinish.playerDeath == false)
+            {
+                BombBlast.gameObject.transform.localPosition = Contact;
+                BombBlast.Play();
+                SoundManager.Instance.PlaySFX(Sounds.playerDeath);
+                animator.SetBool("Died", true);
+                StartCoroutine(DeathReload());
+            }
+            
         }
         
     }

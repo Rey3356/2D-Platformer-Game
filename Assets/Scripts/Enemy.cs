@@ -14,7 +14,9 @@ public class Enemy : MonoBehaviour
     bool playerDied;
     bool switchUP;
 
-    void Start()
+    
+
+    void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
@@ -68,20 +70,23 @@ public class Enemy : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D col)
     {
+        Vector3 contact = col.contacts[0].point;
         //Debug.Log("Enenmy collision : " + col.gameObject.tag);
         if (col.gameObject.tag == "Player")
         {
             PlayerController Cont = col.gameObject.GetComponent<PlayerController>();
-            Cont.HurtPlayer();
+            Cont.HurtPlayer(contact);
                 
         }
 
-        if(col.gameObject.tag == "pointA" || col.gameObject.tag == "pointB")
+        Debug.Log("Triggered turn");
+        if (col.gameObject.tag == "pointA" || col.gameObject.tag == "pointB")
         {
             switchUP = true;
 
         }
 
     }
+
 
 }

@@ -36,6 +36,7 @@ public class LevelLoader : MonoBehaviour
 
     private void onClick()
     {
+        
         if (LevelName != "MM") //Method Mode
         {
             LevelStatus levelStatus = LevelManager.Instance.GetLevelStatus(LevelName);
@@ -43,12 +44,15 @@ public class LevelLoader : MonoBehaviour
             {
                 case LevelStatus.Locked:
                     Debug.Log(LevelName + " is currently " + levelStatus);
+                    PlaySound("incorrectClick");
                     StartCoroutine(LockedStatus(LevelName));
                     break;
                 case LevelStatus.Unlocked:
+                    PlaySound("correctClick");
                     SceneManager.LoadSceneAsync(LevelName);
                     break;
                 case LevelStatus.Completed:
+                    PlaySound("correctClick");
                     SceneManager.LoadSceneAsync(LevelName);
                     break;
 
@@ -56,6 +60,18 @@ public class LevelLoader : MonoBehaviour
 
         }    
         
+    }
+
+    public void PlaySound(string choice)
+    {
+        if(choice == "correctClick")
+        {
+            SoundManager.Instance.PlaySFX(Sounds.ButtonClick);
+        }
+        else if (choice == "incorrectClick")
+        {
+            SoundManager.Instance.PlaySFX(Sounds.ButtonClickWrong);
+        }
     }
 
     IEnumerator LockedStatus(string name)

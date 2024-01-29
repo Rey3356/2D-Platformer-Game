@@ -15,6 +15,7 @@ public class key : MonoBehaviour
     {
         if(col.gameObject.tag == "Player")
         {
+            SoundManager.Instance.PlaySFX(Sounds.KeyCollect);
             anim.SetBool("Collected", true);
             player.KeyPickUp();
             StartCoroutine(destroyer());
