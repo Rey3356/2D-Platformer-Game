@@ -251,3 +251,4 @@ MonoBehaviour:
   playerHealth: {fileID: 0}
   GOScreen: {fileID: 0}
   levelFinish: {fileID: 0}
+  BombBlast: {fileID: 0}

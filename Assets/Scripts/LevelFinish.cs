@@ -23,6 +23,7 @@ public class LevelFinish : MonoBehaviour
                 if(playerDeath == false)
                 {
                     Time.timeScale = 0f;
+                    SoundManager.Instance.PlaySFX(Sounds.playerWin);
                     GameCompleteScreen.SetActive(true);
                 }               
             }

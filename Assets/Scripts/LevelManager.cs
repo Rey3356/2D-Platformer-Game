@@ -41,12 +41,17 @@ public class LevelManager : MonoBehaviour
         SetLevelStatus(currentScene.name, LevelStatus.Completed);
 
         //sets next level to unlocked
-        int nextBI = Array.FindIndex(Levels, level => level == currentScene.name) + 1;
-        if(nextBI < Levels.Length)
+        if(currentScene.buildIndex != 5)
         {
-            SetLevelStatus(Levels[nextBI], LevelStatus.Unlocked);
+            int nextBI = Array.FindIndex(Levels, level => level == currentScene.name) + 1;
+            if (nextBI < Levels.Length)
+            {
+                SetLevelStatus(Levels[nextBI], LevelStatus.Unlocked);
+            }
+            return nextBI;
         }
-        return nextBI;
+        return 0;
+        
     }
     public LevelStatus GetLevelStatus(string level)
     {
